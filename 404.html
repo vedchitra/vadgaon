@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ Mobile scaling -->
+  <title>Reload Page</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f0f4ff, #e0eaff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 90%; /* ✅ Flexible width */
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #2b4eff;
+    }
+    p.instruction {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    button {
+      background: #2b4eff;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: #1a36c2;
+      transform: scale(1.05);
+    }
+    button i {
+      margin-right: 8px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 25px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .feature {
+      font-size: 1rem;
+      color: #444;
+      display: flex;
+      align-items: center;
+    }
+    .feature i {
+      margin-right: 8px;
+      color: #2b4eff;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    /* ✅ Mobile adjustments */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; }
+      .container { padding: 20px; }
+      .features {
+        grid-template-columns: 1fr; /* stack features in one column */
+      }
+      .feature { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <h1>Reload Page</h1>
+    <p class="instruction">जर डिजिटल बिझनेस कार्ड व मिनी वेबसाइट अजूनही लोड झाली नसल्यास खालील Reload बटन प्रेस करून बघा. काही मिनिटात पेज लोड होईल.</p>
+    <button onclick="reloadPage()"><i class="fas fa-sync-alt"></i> Reload</button>
+
+    <h2>फीचर्स आणि मिळणाऱ्या सुविधा </h2>
+    <div class="features">
+      <div class="feature"><i class="fas fa-regular fa-address-card"></i> डिजिटल बिझनेस कार्ड</div>
+           <div class="feature"><i class="fas fa-bolt"></i> फेस्टिवल बॅनर तयार करण्याची सोय</div>
+ <div class="feature"><i class="fas fa-globe"></i> व्यवसायाची मिनी वेबसाइट</div>
+      <div class="feature"><i class="fas fa-mobile-alt"></i> फोन नंबर Save करण्याची सोय  </div>
+      <div class="feature"><i class="fas fa-file"></i> Pdf Save करण्याची सोय</div>
+      <div class="feature"><i class="fas fa-thumbs-up"></i> सोशल मीडिया</div>
+      <div class="feature"><i class="fas fa-square-check"></i> Enquiry फॉर्म </div>
+      <div class="feature"><i class="fas fa-images"></i> 5 Business फोटो </div>
+      <div class="feature"><i class="fas fa-brands fa-youtube"></i> YouTube embed विडियोची सुविधा </div>
+      <div class="feature"><i class="fas fa-share-nodes"></i> कितीही जणांना डिजिटल कार्ड शेयर करू शकता </div>
+    </div>
+  </div>
+
+  <script>
+    function reloadPage() {
+      // Clears cache (forces hard reload)
+      window.location.reload(true);
+    }
+  </script>
+</body>
+</html>
